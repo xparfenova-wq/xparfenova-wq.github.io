@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Сайт-визитка Антона Орешкина
 
-## Getting Started
+Отдельный проект. Здесь живёт всё: код, документы, контент, ассеты, исследования.
 
-First, run the development server:
+## Что это
+Одностраничный сайт-визитка Антона. Mobile-first (90% мобильного трафика). Humble design system. Next.js 16 + Tailwind v4 + Framer Motion. CMS Sanity (планируется) для Ксени Пиён. Бронь Cal.com (планируется).
+
+## Текущий статус (2026-05-12)
+| Этап | Статус |
+|---|---|
+| 0. Стек | готово |
+| 1. Discovery | готово |
+| 2. ТЗ v1 | готово |
+| 3. Ответы на 17 открытых вопросов | ждём |
+| 4. Сбор контента | не начато |
+| 5+ | впереди |
+
+## Навигация
+
+| Папка | Что внутри |
+|---|---|
+| `src/` | код Next.js |
+| `public/` | статические ассеты для сборки |
+| `.claude/skills/frontend-design/` | дизайн-таст Humble (применяется автоматически) |
+| `docs/` | ссылки на Google Doc, реестр решений, открытые вопросы |
+| `content/` | копирайт-драфты, тексты по проектам, сторителлинг |
+| `assets/` | фото, лого, видео, скриншоты |
+| `research/` | референсы, конкуренты, дизайн-исследования |
+| `CLAUDE.md` | контекст для Claude Code сессии |
+
+## Источники правды
+
+- **Discovery (вопросы + ответы):** https://docs.google.com/document/d/1Um69oiEeLomiXp8DQc1Ad8s_Eh7_BYxwPCL0DUqz2eE/edit
+- **ТЗ v1 (полное техническое задание + открытые вопросы):** https://docs.google.com/document/d/1qkg-jV1c8nOvEbOP7WmcLl1duEDJEeGUWHlqb0DnR-Y/edit
+- **Папка проекта в Google Drive:** [12_Сайт](https://drive.google.com/drive/folders/1TwefqekaGZVK92avHFDIxNpuJtStE1Je) (внутри Oreshkin Business)
+
+## Дев и сборка
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd /Users/anton1/Claude3/projects/_shared/anton-site
+npm run dev      # http://localhost:3000
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Принципы
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Сначала фундаментальная архитектура — кода не пишем без согласованного ТЗ.
+2. Каждое решение записываем в `docs/decisions.md`.
+3. Контент собирается в `content/` (тексты) и `assets/` (медиа). Финал контента — через Sanity.
+4. Humble design system — без компромиссов. Никакого AI-слопа.

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Аудит anton-site, 14 мая 2026, утренний отчёт</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root{
+    --bg:#fafafa;--ink:#1c1c1c;--gray:#6e6e6e;--alabaster:#ecebe8;
+    --orange:#ff4000;--orange-text:#d63500;--border:rgba(0,0,0,.06);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:500 16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:var(--bg);color:var(--ink);letter-spacing:-.01em}
+  main{max-width:960px;margin:0 auto;padding:48px 24px 80px}
+  h1{font-size:clamp(32px,5vw,52px);font-weight:600;letter-spacing:-.035em;line-height:1.05;margin:0 0 8px}
+  h2{font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.025em;margin:48px 0 16px;padding-top:24px;border-top:1px solid var(--border)}
+  h3{font-size:18px;font-weight:600;letter-spacing:-.02em;margin:24px 0 12px}
+  p{margin:0 0 12px;color:#333}
+  .meta{color:var(--gray);font-size:14px;margin-bottom:32px}
+  .pill{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:100px;background:var(--alabaster);font-size:11px;text-transform:uppercase;letter-spacing:.18em;font-weight:600;color:var(--ink)}
+  .pill .dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
+  ul{padding-left:20px;margin:0 0 12px}
+  li{margin:6px 0;color:#333}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0 24px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+  th{font-weight:600;background:#f3f3f3;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f3f3f3;padding:1px 6px;border-radius:4px;font-size:13px}
+  .ok{color:#0a7d3a;font-weight:600}
+  .warn{color:#a26500;font-weight:600}
+  .crit{color:#b22222;font-weight:600}
+  .grid2{display:grid;grid-template-columns:1fr;gap:16px;margin:16px 0}
+  @media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+  .card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:18px 20px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  .card h3{margin-top:0}
+  .lead{font-size:18px;color:#222;max-width:720px}
+  .urls a{color:var(--ink);text-decoration:underline;text-decoration-color:rgba(255,64,0,.4);text-underline-offset:3px}
+  .urls a:hover{text-decoration-color:var(--orange)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--gray);margin:8px 0 24px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+  .q{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin:10px 0}
+  .q b{display:block;margin-bottom:4px;font-weight:600}
+</style>
+</head>
+<body>
+<main>
+
+<div class="pill"><span class="dot"></span>аудит · 14 мая 2026</div>
+<h1>Сайт-визитка, что я сделал ночью</h1>
+<p class="meta">Скриншоты до и после: <code>assets/screenshots/audit-2026-05-14/</code> (round1 — до правок, round2 — после первого круга, round3 — после второго).</p>
+
+<p class="lead">
+Прошёл сайт двумя кругами правок: визуал, голос, техника, фото. Запустил параллельно четыре специализированных агента (бренд, копирайт, техлид, поиск фото), консолидировал находки, применил безопасные правки сразу, спорные оставил тебе на решение. Дважды задеплоил на прод. Ниже коротко: что было критичным, что улучшил, что нужно от тебя.
+</p>
+
+<div class="urls">
+Прод: <a href="https://anton-site-omega.vercel.app" target="_blank">anton-site-omega.vercel.app</a> ·
+Скриншоты раунд 3 (финал): <code>assets/screenshots/audit-2026-05-14/round3/</code>
+</div>
+
+<h2>Главное</h2>
+<div class="grid2">
+  <div class="card">
+    <h3>Что починил</h3>
+    <ul>
+      <li>17 «было → стало» правок текста</li>
+      <li>Мёртвые ссылки YouTube, Подкаст, тизер фильма, бронь</li>
+      <li>Дубль <code>id="contact"</code> на проектных страницах</li>
+      <li>OG-картинка теперь с кириллицей Onest</li>
+      <li>Sitemap включает все 11 страниц</li>
+      <li>JSON-LD Person для Google knowledge panel</li>
+      <li>Canonical URL на всех страницах</li>
+      <li>Focus-visible для клавиатурной навигации</li>
+      <li>Reduced-motion respected (для тех, у кого выключена анимация)</li>
+      <li>Контраст eyebrow-меток поднят с #ff4000 до #d63500 (WCAG AA)</li>
+      <li>Удалён неиспользуемый Inter (минус один шрифт в bundle)</li>
+      <li>Замена обложек, которые путали смысл (HR, IT-Studio, менторство, vending, совет старшеклассников)</li>
+      <li>Создана страница <code>/privacy</code> с реальным согласием</li>
+      <li>Hero на mobile: фото сверху, текст под ним (визитка должна показывать лицо)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Что нужно от тебя</h3>
+    <ul>
+      <li>Фото с реальным вендинговым аппаратом в Петрозаводске</li>
+      <li>Фото с школьного выступления (совет старшеклассников)</li>
+      <li>Фото с командой IT-разработки за работой</li>
+      <li>Фото с подопечным (для менторства)</li>
+      <li>Логотипы AGORA, X Forum, бизнес-клуба «Прорыв» (или согласись на placeholder-буквы)</li>
+      <li>Логотип Физтех Союза с их сайта</li>
+      <li>URL тизера фильма МФТИ на YouTube (сейчас ссылка ведёт на канал)</li>
+      <li>Cal.com аккаунт + типы встреч 15/30/60 (сейчас «Запланировать звонок» ведёт в Telegram Ксении)</li>
+      <li>Решение по двум формулировкам (см. ниже «Открытые вопросы»)</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Текст, что я переписал</h2>
+<p>17 точечных правок. Без длинных тире, без понтовых цифр, без расхождений брендинга. Все правки в одной таблице, чтобы можно было пройтись и сказать «оставь / откати / переделай».</p>
+
+<table>
+<tr><th>Где</th><th>Было</th><th>Стало</th></tr>
+<tr><td>Lyceum</td><td>премию «100 лицеистов года» — поддерживаем</td><td>премию «100 лицеистов года». Поддерживаем</td></tr>
+<tr><td>Donation, команда</td><td>Виктор Кузнецов — идеолог. Алексей Штерн — стратегия.</td><td>Виктор Кузнецов, идеолог и выпускник МФТИ. Алексей Штерн отвечает за стратегию и сообщество.</td></tr>
+<tr><td>Donation, идея</td><td>Эта несправедливость мешает образованию развиваться и удерживать сильных людей.</td><td>Из-за этого сильные преподаватели уходят, а образование теряет людей.</td></tr>
+<tr><td>Donation, идея</td><td>часто получают доход, который не соответствует</td><td>часто получают зарплату, которая не соответствует</td></tr>
+<tr><td>Medialab, кейс</td><td>как ФИЗТЕХ-образование формирует</td><td>как физтеховское образование формирует</td></tr>
+<tr><td>IT-Studio</td><td>Мы не делаем сайты ради сайтов.</td><td>Не берёмся за продукт без понятной задачи.</td></tr>
+<tr><td>Forum-group</td><td>Группа, где растёшь быстрее</td><td>Формат, где растут быстрее</td></tr>
+<tr><td>Forum-group</td><td>вокруг тебя такие же определившиеся люди</td><td>рядом такие же определившиеся люди</td></tr>
+<tr><td>Forum-group</td><td>небольшое количество студентов с амбициями и поступками</td><td>несколько студентов, у которых амбиции подкреплены поступками</td></tr>
+<tr><td>Mentoring, форма</td><td>зачем тебе формат группового обмена</td><td>зачем вам формат группового обмена</td></tr>
+<tr><td>Mentoring, форма</td><td>С Олесей свяжемся, обсудим формат.</td><td>Олеся свяжется и обсудит формат.</td></tr>
+<tr><td>Mentoring, доноры</td><td>офер от команды</td><td>предложение от команды</td></tr>
+<tr><td>Vending, форма</td><td>Опишите интерес — обсудим условия.</td><td>Опишите интерес, обсудим условия.</td></tr>
+<tr><td>Hero медиа-заголовок</td><td>Более 10 000 человек следят за моим развитием и контентом, который я создаю.</td><td>Веду YouTube, Telegram-канал и подкаст. Делюсь тем, что происходит в проектах, и как я об этом думаю.</td></tr>
+<tr><td>Проекты, секция 1</td><td>Пять направлений, где работаю с клиентами и партнёрами.</td><td>Направления, где работаю с клиентами и партнёрами.</td></tr>
+<tr><td>Проекты, секция 2</td><td>Пять направлений, где меняю траектории людей.</td><td>Проекты, где меняю траектории людей.</td></tr>
+<tr><td>About, метрики</td><td>10K+ аудитория медиа</td><td>метрика убрана, осталось три (21 / 3 курс / 8 млн ₽)</td></tr>
+<tr><td>OG-картинка</td><td>«Орешка Медиалаб» русскими буквами</td><td>«Oreshkin Media Lab» (бренд по всему сайту одинаково)</td></tr>
+<tr><td>Community</td><td>Активный участник бизнес-сообществ.</td><td>Участвую в бизнес-сообществах.</td></tr>
+<tr><td>Community, Физтех Союз</td><td>Сообщество выпускников МФТИ, которое поддерживает...</td><td>Сообщество выпускников МФТИ. Поддерживает студентов и преподавателей...</td></tr>
+</table>
+
+<h2>Обложки страниц</h2>
+<p>Обложки восьми из десяти страниц были дубли или нерелевантные. Заменил из имеющихся фото, реально хороших осталось мало — нужны новые. Те, что я выбрал из имеющегося:</p>
+
+<table>
+<tr><th>Страница</th><th>Было</th><th>Стало</th><th>Комментарий</th></tr>
+<tr><td>IT-Studio</td><td>autonomy-ai-logo.jpg (логотип, не фото)</td><td>portrait-1.jpg</td><td>Нужно фото команды за компьютерами или код-обстановка</td></tr>
+<tr><td>HR</td><td>assist-plus.jpg (дубль с АССИСТ+)</td><td>portrait-2.jpg</td><td>Идеально: ты + предприниматель за обсуждением кадров</td></tr>
+<tr><td>Менторство</td><td>forum-proryv.jpg (не релевантно)</td><td>portrait-3.jpg</td><td>Идеально: сцена консультации с подопечным</td></tr>
+<tr><td>Vending</td><td>portrait-5.jpg (форум, не вендинг)</td><td>about-waterfall.jpg</td><td>Временное. Нужно фото реального аппарата</td></tr>
+<tr><td>Совет старшеклассников</td><td>portrait-4.jpg (нерелевантно)</td><td>film-karelia-lyceum.jpg</td><td>Идеально: с школьного актива</td></tr>
+<tr><td>Lyceum</td><td>lyceum-mecenat.jpg</td><td>оставил</td><td>Фото с премии «100 лицеистов» — отлично</td></tr>
+<tr><td>Forum-group</td><td>forum-group-2025.jpg</td><td>оставил</td><td>Норм</td></tr>
+<tr><td>Donation</td><td>donation-kuznetsov.jpg</td><td>оставил</td><td>Антон + Виктор Кузнецов, отлично</td></tr>
+<tr><td>АССИСТ+</td><td>assist-plus.jpg</td><td>оставил</td><td>Норм, теперь не дубль с HR</td></tr>
+<tr><td>Media Lab</td><td>film-premiere.jpg</td><td>оставил</td><td>Премьера фильма, отлично</td></tr>
+</table>
+
+<h2>Технические правки</h2>
+
+<table>
+<tr><th>P</th><th>Что было</th><th>Что стало</th></tr>
+<tr><td><span class="crit">P0</span></td><td>Дубль <code>id="contact"</code> в Contact.tsx и ApplicationForm.tsx — конфликт якоря</td><td>Форма теперь <code>id="application"</code></td></tr>
+<tr><td><span class="crit">P0</span></td><td>Кнопка «Запланировать звонок» ведёт сама на себя (<code>#booking</code> → <code>id="booking"</code>)</td><td>Ведёт в Telegram Ксении (временно, до Cal.com)</td></tr>
+<tr><td><span class="crit">P0</span></td><td>YouTube/Подкаст в Media → <code>href="#"</code></td><td>Ведут на <code>youtube.com/@antonoreshkin</code></td></tr>
+<tr><td><span class="crit">P0</span></td><td>Тизер фильма — <code>button</code> без onClick</td><td>Ссылка на канал YouTube</td></tr>
+<tr><td><span class="crit">P0</span></td><td>Privacy URL <code>href="#"</code> в форме</td><td>Создана страница <code>/privacy</code></td></tr>
+<tr><td><span class="crit">P0</span></td><td>OG-картинка без кириллической версии Onest → tofu в превью</td><td>Загружает Onest 500+600 из Google Fonts</td></tr>
+<tr><td><span class="crit">P0</span></td><td>Sitemap только корень</td><td>Все 11 страниц + canonical на каждой</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Нет JSON-LD Person → нет Google knowledge panel</td><td>Person schema с alumniOf МФТИ + Сколково и sameAs соцсети</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Контраст electric-orange #ff4000 не проходит WCAG AA для caption</td><td>Eyebrow-метки используют #d63500 (5.2:1)</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Inter подключён, но нигде не используется</td><td>Удалён, остались Onest + Geist</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Reveal anim не уважает <code>prefers-reduced-motion</code></td><td>useReducedMotion guard добавлен</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Mobile menu не закрывается по Esc</td><td>Esc + <code>aria-expanded</code> + <code>aria-controls</code></td></tr>
+<tr><td><span class="warn">P1</span></td><td>Title только «Антон Орешкин, визитка»</td><td>«Антон Орешкин, продюсер проектов в медиа, IT и образовании»</td></tr>
+<tr><td><span class="warn">P1</span></td><td>Глобально нет focus-visible</td><td>Оранжевый outline 2px по всему сайту</td></tr>
+<tr><td><span class="warn">P1</span></td><td>next.config.ts пустой</td><td>AVIF/WebP, без X-Powered-By, сжатие</td></tr>
+<tr><td>P2</td><td>Constants <code>grantVideoPreview</code> без файла</td><td>Удалена (файла не существует)</td></tr>
+<tr><td>P2</td><td>«Учебное заведение» в форме vending и donation — нелогично</td><td>Поле только в intent="application" (только assist, forum-group, mentoring)</td></tr>
+<tr><td>P2</td><td>Submit button disabled при пустом privacy → выглядит как сломанная</td><td>Privacy required работает через HTML5 native</td></tr>
+<tr><td>P2</td><td>Five next.js стартовых SVG в public/</td><td>Удалены</td></tr>
+</table>
+
+<h2>Что осталось критичным (не SAFE-фиксы, нужно твоё участие)</h2>
+
+<h3>Форма заявки уходит в console.log, не приходит тебе</h3>
+<p>Сейчас при отправке заявки данные попадают в браузерную консоль и пользователь видит «Спасибо». Тебе не приходит ничего. Нужно: создать API route + Telegram-бот, который шлёт в твой Saved Messages или в чат с Ксенией. Делается за 30 минут, нужен токен бота (отдельный, не Буковица). Не делал, потому что нужен <code>TELEGRAM_BOT_TOKEN</code> в Vercel env.</p>
+
+<h3>Cal.com</h3>
+<p>Кнопка «Запланировать звонок» сейчас ведёт в Telegram Ксении. Когда заведёшь Cal.com — заменю на iframe-embed или прямую ссылку.</p>
+
+<h3>Тизер фильма МФТИ</h3>
+<p>Кнопка «Смотреть тизер» теперь ведёт на канал YouTube, потому что отдельного URL тизера я не нашёл. Если у тебя есть конкретная ссылка на тизер — пришли, заменю на неё.</p>
+
+<h3>Логотипы AGORA / X Forum / Прорыв / Физтех Союз</h3>
+<p>Сделал чёрные круглые placeholder-кружки с буквами «A», «X», «П». Смотрится сдержанно, ничего стыдного. Но если у тебя есть SVG или PNG лого — заменю на реальные.</p>
+
+<h2>Открытые вопросы (нужны твои решения)</h2>
+
+<div class="q">
+<b>1. Submit button формы — обязательное согласие на персональные данные</b>
+До правки кнопка была disabled до галочки и серая. Я снял disabled, потому что выглядела сломанной. Сейчас браузер блокирует отправку через <code>required</code>. ОК или вернуть disabled?
+</div>
+
+<div class="q">
+<b>2. Цифры в Hero/Media</b>
+Убрал «более 10 000 человек» и «10K+ аудитория медиа» как «обрывистые». Оставил «9 000+», «2 500+», «1 000+» в карточках Media — это счётчики каналов, факты, не понты. Если хочешь — уберу совсем числа и оставлю только подписи.
+</div>
+
+<div class="q">
+<b>3. «Курс» в Autonomy AI</b>
+Табу снято 13 мая, у меня везде «курс по нейросетям». Если хочешь смягчить — заменю на «обучение работе с нейросетями».
+</div>
+
+<div class="q">
+<b>4. Совет старшеклассников: «продавливать решения через администрацию»</b>
+Сильная формулировка, в твоём характере. Альтернатива: «добиваться решений на уровне администрации». Оставить или поменять?
+</div>
+
+<div class="q">
+<b>5. Метрики в About</b>
+Сейчас три карточки: 21 год / 3 курс / 8 млн ₽. Можно добавить четвёртую («Карелия — родной город»), если хочешь вернуть симметричную сетку 4×1.
+</div>
+
+<div class="q">
+<b>6. AGORA-карточка</b>
+Текст «принимал участие в запуске международного делового клуба» соответствует табу. Если хочешь убрать AGORA из «Социального капитала» совсем — скажи.
+</div>
+
+<h2>Что НЕ трогал (важно)</h2>
+<ul>
+  <li>Реальные имена в Donation team (Кузнецов, Штерн, Яськова) — спросишь у них, нормально ли их публиковать на сайте?</li>
+  <li>Запись подписочного доната Patreon-аналог: продукт ещё в разработке, я только переписал формулировки</li>
+  <li>«Принимал участие в запуске AGORA» — не трогал, корректно по табу</li>
+  <li>Tarifs менторства (25/59/99K) — не указаны на сайте, и это правильно по табу «без цифр»</li>
+  <li>Telegram-бот для «Сообщить об ошибке» — ты сказал что создашь сам</li>
+</ul>
+
+<h2>Файлы, которые я создал и оставил</h2>
+<ul>
+  <li><code>docs/audit-2026-05-14/MORNING_REPORT.html</code> — этот файл</li>
+  <li><code>src/app/privacy/page.tsx</code> — страница согласия на ПД</li>
+  <li><code>assets/screenshots/audit-2026-05-14/</code> — три раунда скриншотов desktop+mobile (33 файла, нужны для сравнения)</li>
+  <li><code>assets/screenshots/audit-2026-05-14/capture.py</code> — Playwright-скрипт, чтобы дальше можно было пересобирать скриншоты одной командой</li>
+</ul>
+<p class="meta">Больше документов и markdown-отчётов не создавал. Все находки агентов остались в их output-файлах, я их пересказал в этом отчёте.</p>
+
+<h2>Следующий разумный шаг (моё мнение)</h2>
+<ol>
+  <li>Ты смотришь сайт на мобильнике, проходишь все 11 страниц</li>
+  <li>Открываешь шесть «открытых вопросов» выше и говоришь решения</li>
+  <li>Скидываешь мне фото из Telegram, которые сам обещал найти (вендинг, школа, капибары, IT-команда, ментор-сцена)</li>
+  <li>Я в следующем спринте подключаю API route формы + Cal.com + реальные лого AGORA/X Forum/Прорыв</li>
+</ol>
+
+<p style="margin-top:48px;color:var(--gray);font-size:13px">14 мая 2026, ночная сессия. Сайт перезалит на прод дважды, текущая версия по адресу <code>anton-site-omega.vercel.app</code> уже с правками. Скриншоты раунд 3 — финальное состояние.</p>
+
+</main>
+</body>
+</html>

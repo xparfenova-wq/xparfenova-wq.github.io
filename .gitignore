@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# тяжёлые ассеты (живут в Google Drive 12_Сайт)
+assets/screenshots/
+assets/photos/*.pptx
+assets/photos/*.zip
+assets/videos/
+**/*.pptx
+**/*.zip
+**/*.mov
+**/*.mp4
+
+# OS
+Thumbs.db

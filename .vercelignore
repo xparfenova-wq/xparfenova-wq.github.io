@@ -1,0 +1,9 @@
+assets/
+docs/
+content/
+research/
+**/*.pptx
+**/*.zip
+node_modules
+.next
+.vercel
