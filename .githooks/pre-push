@@ -1,0 +1,16 @@
+#!/bin/sh
+# Запрещаем прямой push в main. Заходим через PR.
+# Чтобы включить: git config core.hooksPath .githooks
+protected_branch='main'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+if [ "$current_branch" = "$protected_branch" ]; then
+  echo ""
+  echo "Прямой push в main запрещён."
+  echo "Создай ветку: git checkout -b feat/что-делаем"
+  echo "Потом: git push -u origin feat/что-делаем"
+  echo "Потом: gh pr create"
+  echo ""
+  exit 1
+fi
+exit 0
