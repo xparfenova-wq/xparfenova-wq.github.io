@@ -1,7 +1,4 @@
-# Антон — owner всего по умолчанию
-* @antonoreshkin
+# Антон — owner репозитория
+# Ксюша — co-owner оперативной разработки сайта
+* @antonoreshkin @xparfenova
 
-# Ксюша — co-owner после добавления её в репо
-# раскомментировать когда добавим:
-# content/    @xeniapm
-# src/lib/content.ts  @xeniapm
