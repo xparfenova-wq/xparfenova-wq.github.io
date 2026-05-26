@@ -124,8 +124,8 @@ export default async function Image() {
           <div>antonoreshkin.ru</div>
           <div style={{ display: "flex", gap: "20px" }}>
             <span>Oreshkin Media Lab</span>
-            <span>Студия IT</span>
-            <span>Autonomy AI</span>
+            <span>Synapt</span>
+            <span>Automy AI</span>
             <span>АССИСТ+</span>
           </div>
         </div>

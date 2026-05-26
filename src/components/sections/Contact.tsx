@@ -41,7 +41,7 @@ export function Contact() {
               className="mt-5 text-canvas-white/70 max-w-[460px]"
               style={{ fontSize: "16px", lineHeight: 1.55 }}
             >
-              Беру в работу проекты в медиа, IT-разработке, подборе сотрудников и менторском сопровождении. Ответ через Ксению обычно быстрее.
+              Работаю с проектами в IT-разработке, AI, образовании, медиа, менторском сопровождении и подборе сотрудников.
             </p>
 
             <div className="mt-8">
@@ -90,7 +90,7 @@ export function Contact() {
                 <div>
                   <div className="text-[15px] font-medium">Написать Ксении</div>
                   <div className="text-[12px] text-granite-gray">
-                    @{SITE.tg.xenia} · ассистент, отвечает быстрее
+                    @{SITE.tg.xenia} · бизнес-ассистент
                   </div>
                 </div>
               </span>

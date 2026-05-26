@@ -73,11 +73,11 @@ export function About() {
             ].map((m) => (
               <div key={m.label} className="flex flex-col gap-1">
                 <div
-                  className="font-display font-semibold text-obsidian-text"
+                  className="font-display font-semibold text-electric-orange"
                   style={{
-                    fontSize: "clamp(20px, 2vw, 24px)",
+                    fontSize: "clamp(36px, 4vw, 52px)",
                     lineHeight: 1,
-                    letterSpacing: "-0.02em",
+                    letterSpacing: "-0.03em",
                   }}
                 >
                   {m.value}

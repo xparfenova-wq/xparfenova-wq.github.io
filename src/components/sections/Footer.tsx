@@ -17,7 +17,7 @@ export function Footer() {
             </span>
           </div>
           <p className="text-[13px] text-granite-gray leading-relaxed max-w-[260px]">
-            Студент МФТИ × Сколково. Продюсер проектов в медиа, IT и образовании.
+            Студент МФТИ × Сколково. Строю проекты в IT, образовании и медиа.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-[14px] text-obsidian-text hover:text-electric-orange transition-colors"
             >
-              @{SITE.tg.xenia} · ассистент
+              @{SITE.tg.xenia} · бизнес-ассистент
             </Link>
             <Link
               href={`https://t.me/${SITE.tg.anton}`}

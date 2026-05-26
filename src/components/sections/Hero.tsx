@@ -54,7 +54,7 @@ export function Hero() {
               className="mt-7 max-w-[480px] text-granite-gray"
               style={{ fontSize: "16px", lineHeight: 1.55, fontWeight: 500 }}
             >
-              Студент МФТИ × Сколково, родом из Карелии. Делаю проекты в медиа, IT и образовании.
+              Студент МФТИ × Сколково. Строю проекты в IT, образовании и медиа — стремлюсь быть вкладом в жизни людей и менять их к лучшему.
             </motion.p>
 
             <motion.div

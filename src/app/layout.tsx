@@ -19,24 +19,24 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://antonoreshkin.ru"),
   alternates: { canonical: "/" },
-  title: "Антон Орешкин, продюсер проектов в медиа, IT и образовании",
+  title: "Антон Орешкин — проекты в IT, образовании и медиа",
   description:
-    "Студент МФТИ × Сколково, 21 год. Oreshkin Media Lab, студия IT-разработки, Autonomy AI, АССИСТ+, менторская программа.",
+    "Студент МФТИ × Сколково, 21 год. Synapt, Automy AI, АССИСТ+, менторская программа, Oreshkin Media Lab.",
   keywords: [
     "Антон Орешкин",
+    "Synapt",
     "Oreshkin Media Lab",
     "МФТИ",
     "Сколково",
-    "продюсер",
     "AI",
     "наставническая программа",
     "АССИСТ+",
-    "Autonomy AI",
+    "Automy AI",
   ],
   openGraph: {
-    title: "Антон Орешкин, продюсер проектов в медиа, IT и образовании",
+    title: "Антон Орешкин — проекты в IT, образовании и медиа",
     description:
-      "Oreshkin Media Lab, студия IT-разработки, Autonomy AI, АССИСТ+, менторская программа.",
+      "Synapt, Automy AI, АССИСТ+, менторская программа, Oreshkin Media Lab.",
     url: "https://antonoreshkin.ru",
     siteName: "Антон Орешкин",
     locale: "ru_RU",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Антон Орешкин, продюсер проектов в медиа, IT и образовании",
+    title: "Антон Орешкин — проекты в IT, образовании и медиа",
     description:
-      "Oreshkin Media Lab, студия IT-разработки, Autonomy AI, АССИСТ+, менторская программа.",
+      "Synapt, Automy AI, АССИСТ+, менторская программа, Oreshkin Media Lab.",
   },
   robots: { index: true, follow: true },
 };
@@ -57,7 +57,7 @@ const personJsonLd = {
   name: "Антон Орешкин",
   url: "https://antonoreshkin.ru",
   image: "https://antonoreshkin.ru/photos/hero-portrait-1600.jpg",
-  jobTitle: "Продюсер проектов в медиа, IT и образовании",
+  jobTitle: "Строю проекты в IT, образовании и медиа",
   alumniOf: [
     { "@type": "Organization", name: "МФТИ" },
     {
