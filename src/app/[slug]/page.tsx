@@ -68,7 +68,13 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
     intent: "application",
     title: "Заявка на менторскую программу",
     subtitle:
-      "Расскажите кратко о себе и цели. Олеся свяжется и обсудит формат.",
+      "Расскажите кратко о себе и цели. Свяжемся в течение рабочего дня.",
+  },
+  "automy-ai": {
+    intent: "application",
+    title: "Записаться на курс",
+    subtitle:
+      "Расскажите кратко о себе и задаче. Свяжемся и расскажем про ближайший поток.",
   },
   vending: {
     intent: "partnership",

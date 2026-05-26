@@ -171,35 +171,47 @@ export function ProjectContent({ slug }: { slug: string }) {
             ]}
           />
 
-          <div className="bg-ghost-white py-14 sm:py-20">
-            <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12">
-              <Reveal>
-                <div className="text-[12px] uppercase tracking-[0.22em] text-electric-orange-text font-medium mb-4">
-                  Под-проект
-                </div>
-                <h2
-                  className="font-display font-semibold text-obsidian-text mb-6"
-                  style={{
-                    fontSize: "clamp(26px, 3.4vw, 38px)",
-                    lineHeight: 1.1,
-                    letterSpacing: "-0.03em",
-                  }}
-                >
-                  Automy AI: канал и курс по нейросетям
-                </h2>
-                <p className="text-[16px] sm:text-[17px] leading-[1.6] text-granite-gray mb-5">
-                  Automy AI — Telegram-канал о практическом применении
-                  нейросетей и курс для тех, кто хочет встроить AI в работу
-                  команды или личную эффективность.
-                </p>
-                <p className="text-[16px] sm:text-[17px] leading-[1.6] text-granite-gray">
-                  Не теория, а конкретика: какие модели выбрать под задачу, как
-                  выстроить работу вокруг них и как оценивать результат в
-                  деньгах.
-                </p>
-              </Reveal>
-            </div>
-          </div>
+        </>
+      );
+
+    case "automy-ai":
+      return (
+        <>
+          <Section eyebrow="Что это" title="Практика применения нейросетей">
+            <p>
+              Automy AI — Telegram-канал о том, как нейросети меняют работу
+              команд и предпринимателей. Разбираем конкретные модели, сценарии
+              применения и результаты в цифрах.
+            </p>
+            <p>
+              Отдельно — курс по практическому применению AI для тех, кто хочет
+              встроить нейросети в повседневную работу: выбрать инструменты под
+              задачу, выстроить процессы и оценить эффект.
+            </p>
+          </Section>
+
+          <FeaturesBlock
+            items={[
+              {
+                title: "Telegram-канал",
+                description:
+                  "Регулярные материалы: новые модели, кейсы, инструменты. Без воды.",
+                icon: MessageSquare,
+              },
+              {
+                title: "Курс",
+                description:
+                  "Практические занятия по применению AI в работе команды и личной эффективности.",
+                icon: Sparkles,
+              },
+              {
+                title: "Для предпринимателей",
+                description:
+                  "Не для разработчиков — для тех, кто принимает решения и хочет понять, что AI даёт бизнесу.",
+                icon: Briefcase,
+              },
+            ]}
+          />
         </>
       );
 
