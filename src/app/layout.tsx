@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Onest, Geist } from "next/font/google";
+import { Bricolage_Grotesque, Geist } from "next/font/google";
 import "./globals.css";
 
-const display = Onest({
+const display = Bricolage_Grotesque({
   variable: "--font-bricolage",
-  subsets: ["latin", "latin-ext", "cyrillic"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   display: "swap",
 });
