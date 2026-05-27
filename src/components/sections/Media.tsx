@@ -164,7 +164,7 @@ export function Media() {
               alt="Премьера фильма про МФТИ"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent lg:bg-gradient-to-r" />
             <Link

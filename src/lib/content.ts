@@ -57,7 +57,7 @@ export const HERO_LOGOS = [
   {
     name: "Московская школа управления Сколково",
     short: "Сколково",
-    logo: "/logos/skolkovo.png",
+    logo: "/logos/skolkovo-icon.png",
   },
 ];
 
@@ -83,7 +83,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Видео и фильмы для брендов и проектов.",
     long:
       "Снимаем форматы под задачи бизнеса и медиа. Главный кейс года, полнометражный фильм про МФТИ с предпринимателями Forbes и нобелевским лауреатом Константином Новосёловым. Премьера прошла в Долгопрудном, собрала 400 человек.",
-    cover: "/photos/film-premiere.jpg",
+    cover: "/photos/medialab-cover.png",
   },
   {
     id: "it-studio",
@@ -105,7 +105,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Подбираем людей — от бизнес-ассистента до операционного директора.",
     long:
       "Подбираем людей для предпринимателей: бизнес-ассистентов, операционных менеджеров, маркетологов, топ-менеджеров. Работаем с сообществом студентов МФТИ, ВШЭ, МГИМО и других ведущих вузов России — это даёт доступ к кандидатурам, которых нет на открытом рынке.",
-    cover: "/photos/portrait-2.jpg",
+    cover: "/photos/assist-plus.jpg",
   },
   {
     id: "mentoring",
@@ -219,10 +219,10 @@ export const FILM_GUESTS: {
   };
 } = {
   all: [
-    { name: "Константин Новосёлов", role: "Нобелевский лауреат", photo: "/photos/film-novoselov.jpg" },
-    { name: "Михаил Кучмент", role: "Сооснователь Hoff", photo: "/photos/film-kuchment.jpg" },
-    { name: "Игорь Рыбаков", role: "Forbes, Технониколь", photo: "/photos/film-rybakov.jpg" },
-    { name: "Дмитрий Ливанов", role: "Ректор МФТИ", photo: "/photos/film-livanov.jpg" },
+    { name: "Константин Новосёлов", role: "Нобелевский лауреат" },
+    { name: "Михаил Кучмент", role: "Сооснователь Hoff" },
+    { name: "Игорь Рыбаков", role: "Forbes, Технониколь" },
+    { name: "Дмитрий Ливанов", role: "Ректор МФТИ" },
     { name: "Виктор Кузнецов", role: "Выпускник МФТИ" },
     { name: "Алексей Половинкин", role: "Выпускник МФТИ" },
     { name: "Татьяна Савельева", role: "Выпускница МФТИ" },
@@ -296,8 +296,8 @@ export const COMMUNITY = [
 ];
 
 export const PARTNERS_FLOATING = [
-  { name: "Т-Банк", note: "Партнёр", logo: "/logos/tbank.png" },
-  { name: "Онлайн-школа Сколково", note: "Партнёр", logo: "/logos/skolkovo.png" },
+  { name: "Т-Банк", note: "Партнёр", logo: "/logos/tbank-icon.png" },
+  { name: "Онлайн-школа Сколково", note: "Партнёр", logo: "/logos/skolkovo-icon.png" },
 ];
 
 export const PARTNER_HIGHLIGHT = {
