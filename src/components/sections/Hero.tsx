@@ -23,16 +23,6 @@ export function Hero() {
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
           {/* TEXT */}
           <div className="order-2 lg:order-1">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: EASE }}
-              className="inline-flex items-center gap-2 mb-7 text-[12px] uppercase tracking-[0.22em] text-granite-gray font-medium"
-            >
-              <span className="size-1.5 rounded-full bg-electric-orange" />
-              Визитка · 2026
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
