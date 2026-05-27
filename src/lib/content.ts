@@ -53,7 +53,7 @@ export const NAV = [
 
 // Партнёры, которые упоминаются в Hero/Media как floating-карточки
 export const HERO_LOGOS = [
-  { name: "МФТИ", short: "МФТИ", logo: "/logos/mipt.png" },
+  { name: "МФТИ", short: "МФТИ", logo: "/logos/mipt.svg" },
   {
     name: "Московская школа управления Сколково",
     short: "Сколково",
