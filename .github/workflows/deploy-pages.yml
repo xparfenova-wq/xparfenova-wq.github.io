@@ -30,6 +30,7 @@ jobs:
       - run: npm run build
         env:
           GITHUB_PAGES: "1"
+          NEXT_BASE_PATH: "/anton-site-preview"
 
       - uses: actions/upload-pages-artifact@v3
         with:
