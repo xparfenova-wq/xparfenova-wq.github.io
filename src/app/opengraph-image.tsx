@@ -1,29 +1,11 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const dynamic = "force-static";
 export const alt = "Антон Орешкин, визитка";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-async function loadOnest(weight: 400 | 500 | 600) {
-  const url = `https://fonts.googleapis.com/css2?family=Onest:wght@${weight}&subset=cyrillic&display=swap`;
-  const css = await fetch(url, {
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
-    },
-  }).then((r) => r.text());
-  const match = css.match(
-    /src: url\((https:\/\/[^)]+\.(?:woff2|ttf))\)/
-  );
-  if (!match) throw new Error("Onest font URL not found");
-  const buf = await fetch(match[1]).then((r) => r.arrayBuffer());
-  return buf;
-}
-
-export default async function Image() {
-  const [w500, w600] = await Promise.all([loadOnest(500), loadOnest(600)]);
-
+export default function Image() {
   return new ImageResponse(
     (
       <div
@@ -35,22 +17,9 @@ export default async function Image() {
           justifyContent: "space-between",
           padding: "72px",
           background: "#fafafa",
-          fontFamily: "Onest",
-          position: "relative",
+          fontFamily: "system-ui, sans-serif",
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            top: "-200px",
-            right: "-100px",
-            width: "600px",
-            height: "600px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(255,64,0,0.18) 0%, transparent 70%)",
-          }}
-        />
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <div
             style={{
@@ -68,13 +37,7 @@ export default async function Image() {
           >
             АО
           </div>
-          <div
-            style={{
-              fontSize: "20px",
-              color: "#1c1c1c",
-              fontWeight: 500,
-            }}
-          >
+          <div style={{ fontSize: "20px", color: "#1c1c1c", fontWeight: 500 }}>
             Антон Орешкин · визитка
           </div>
         </div>
@@ -103,11 +66,9 @@ export default async function Image() {
               fontWeight: 500,
               maxWidth: "880px",
               lineHeight: 1.35,
-              letterSpacing: "-0.015em",
             }}
           >
-            Продакшн, IT-разработка, наставничество, AI. Соединяю людей,
-            продюсирую идеи в результат.
+            Продакшн, IT-разработка, наставничество, AI
           </div>
         </div>
 
@@ -118,7 +79,6 @@ export default async function Image() {
             alignItems: "center",
             fontSize: "16px",
             color: "#6e6e6e",
-            fontWeight: 500,
           }}
         >
           <div>antonoreshkin.ru</div>
@@ -131,12 +91,6 @@ export default async function Image() {
         </div>
       </div>
     ),
-    {
-      ...size,
-      fonts: [
-        { name: "Onest", data: w500, style: "normal", weight: 500 },
-        { name: "Onest", data: w600, style: "normal", weight: 600 },
-      ],
-    }
+    { ...size }
   );
 }
