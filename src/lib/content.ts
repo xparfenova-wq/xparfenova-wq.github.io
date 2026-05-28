@@ -57,7 +57,7 @@ export const HERO_LOGOS = [
   {
     name: "Московская школа управления Сколково",
     short: "Сколково",
-    logo: "/logos/skolkovo-icon.png",
+    logo: "/logos/skolkovo-sk.svg",
   },
 ];
 
@@ -127,7 +127,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Telegram-канал о нейросетях и курс по практическому применению AI.",
     long:
       "Automy AI — Telegram-канал о практическом применении нейросетей и курс для тех, кто хочет встроить AI в работу команды или личную эффективность. Не теория, а конкретика: какие модели выбрать под задачу, как выстроить работу вокруг них и как оценивать результат.",
-    cover: "/photos/automy-ai-cover.jpeg",
+    cover: "/photos/autonomy-ai-logo.jpg",
   },
   {
     id: "vending",

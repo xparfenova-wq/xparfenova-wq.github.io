@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Sparkles, Users, Briefcase, Award, Lightbulb, MessageSquare, type LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
@@ -177,6 +178,15 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "automy-ai":
       return (
         <>
+          <div className="mb-8">
+            <Image
+              src="/logos/automy-ai-wordmark.png"
+              alt="Automy AI"
+              width={280}
+              height={73}
+              className="object-contain"
+            />
+          </div>
           <Section eyebrow="Что это" title="Практика применения нейросетей">
             <p>
               Automy AI — Telegram-канал о том, как нейросети меняют работу
