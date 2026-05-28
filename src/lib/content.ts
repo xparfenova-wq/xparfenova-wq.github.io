@@ -94,7 +94,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "AI и IT разработка: веб, мобильные и AI-решения для роста бизнеса.",
     long:
       "Собираем команды под актуальные задачи и строим работающие продукты под ключ — от прототипа до полной разработки и отлаженной работы. Сначала спецификация с фиксированными сроками и ценой, потом разработка. Код остаётся у клиента.",
-    cover: "/photos/portrait-1.jpg",
+    cover: "/photos/cover-synapt.jpg",
   },
   {
     id: "hr",
@@ -105,7 +105,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Подбираем профессионалов для бизнеса: ассистентов, маркетологов, топ-менеджеров.",
     long:
       "Работаем с сообществами МФТИ, ВШЭ, МГИМО и других ведущих вузов России — это даёт доступ к талантам, которых ещё нет на открытом рынке.",
-    cover: "/photos/assist-plus.jpg",
+    cover: "/photos/assist-plus-logo.jpg",
   },
   {
     id: "mentoring",
@@ -116,7 +116,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Поступление в титульные вузы и старт в предпринимательстве.",
     long:
       "Работаю с двумя группами. Старшеклассникам — помогаю поступить в МФТИ и другие топовые вузы через олимпиады и ЕГЭ. Студентам — помогаю найти своё направление и запустить первый проект.",
-    cover: "/photos/portrait-3.jpg",
+    cover: "/photos/cover-mentoring.jpg",
   },
   {
     id: "automy-ai",
@@ -127,7 +127,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Обучаем работе с нейросетями и ведём Telegram-канал об AI.",
     long:
       "Помогаем тем, кто хочет встроить AI в рабочие и личные процессы — чтобы делать больше, быстрее, лучше, а уставать меньше.",
-    cover: "/photos/portrait-2.jpg",
+    cover: "/photos/cover-automy.jpg",
   },
   {
     id: "vending",
@@ -138,7 +138,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Действующая сеть в родном городе.",
     long:
       "Первый офлайн-бизнес — сеть кофейных аппаратов в Петрозаводске. Работает стабильно несколько лет.",
-    cover: "/photos/about-waterfall.jpg",
+    cover: "/photos/cover-vending.jpg",
   },
 ];
 
