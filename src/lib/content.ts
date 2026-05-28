@@ -244,7 +244,7 @@ export const FILM_GUESTS: {
 };
 
 export const PREMIERE_GALLERY = [
-  { src: "/photos/film-premiere.jpg", alt: "Премьера фильма про МФТИ, зрители в зале" },
+  { src: "/photos/film-premiere.jpg", alt: "Постер фильма про МФТИ", objectPosition: "top" },
   { src: "/photos/portrait-1.jpg", alt: "Антон Орешкин на сцене премьеры" },
   { src: "/photos/portrait-2.jpg", alt: "Антон на премьере фильма" },
   { src: "/photos/film-karelia-lyceum.jpg", alt: "Показ фильма про МФТИ" },

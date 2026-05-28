@@ -91,8 +91,6 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
   assist: {
     intent: "application",
     title: "Заявка в сообщество",
-    subtitle:
-      "Расскажите кратко о себе, вузе и интересах. Откроем доступ в сообщество.",
   },
   "forum-group": {
     intent: "application",

@@ -305,6 +305,7 @@ export function Media() {
                 fill
                 sizes="(max-width: 640px) 50vw, 25vw"
                 className="object-cover"
+                style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
               />
             </motion.div>
           ))}
