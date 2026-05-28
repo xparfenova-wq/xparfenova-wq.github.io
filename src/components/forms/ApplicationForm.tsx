@@ -258,22 +258,23 @@ export function ApplicationForm({
                     onChange={(value) => update("privacyAccepted", value)}
                     required
                   >
-                    Я согласен с{" "}
+                    Я даю согласие на{" "}
                     <a
                       href="/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors"
                     >
-                      обработкой персональных данных
-                    </a>
+                      обработку персональных данных
+                    </a>{" "}
+                    в целях ответа на мой запрос
                   </Checkbox>
                   <Checkbox
                     id="application-marketing"
                     checked={state.marketingAccepted}
                     onChange={(value) => update("marketingAccepted", value)}
                   >
-                    Согласен получать сообщения от Антона
+                    Соглашаюсь получать информационные рассылки от Антона Орешкина
                   </Checkbox>
                 </div>
 
