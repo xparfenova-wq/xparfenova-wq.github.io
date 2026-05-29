@@ -167,15 +167,6 @@ export function Media() {
               className="object-cover object-top"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent lg:bg-gradient-to-r" />
-            <Link
-              href={SITE.filmFullUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute left-6 bottom-6 sm:left-10 sm:bottom-10 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-canvas-white text-obsidian-text text-[14px] font-medium hover:bg-ghost-white transition-colors"
-            >
-              <Play className="size-4" fill="currentColor" />
-              Смотреть фильм
-            </Link>
           </div>
 
           <div className="p-8 sm:p-10 lg:p-14 text-canvas-white flex flex-col justify-center">
@@ -192,9 +183,19 @@ export function Media() {
             >
               Полнометражный фильм с предпринимателями Forbes и нобелевским лауреатом.
             </h3>
-            <p className="text-[14px] text-canvas-white/75 mb-7 leading-relaxed">
+            <p className="text-[14px] text-canvas-white/75 mb-5 leading-relaxed">
               «Как учат гениев в МФТИ»: 11 героев, нобелевский лауреат, основатели Hoff и Технониколь, ректор МФТИ.
             </p>
+
+            <Link
+              href={SITE.filmFullUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-7 self-start inline-flex items-center gap-2 px-5 py-3 rounded-full bg-canvas-white text-obsidian-text text-[14px] font-medium hover:bg-ghost-white transition-colors"
+            >
+              <Play className="size-4" fill="currentColor" />
+              Смотреть фильм
+            </Link>
 
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-x-4 gap-y-4">
               {FILM_GUESTS.all.map((g) => (
