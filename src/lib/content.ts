@@ -147,6 +147,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     long:
       "Первый офлайн-бизнес — сеть кофейных аппаратов в Петрозаводске. Работает несколько лет, процессы отлажены.",
     cover: "/photos/cover-vending.jpg",
+    heroCover: "/photos/hero-vending.jpg",
     hideName: true,
   },
 ];
