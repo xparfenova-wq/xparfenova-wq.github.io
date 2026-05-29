@@ -274,7 +274,16 @@ export function ApplicationForm({
                     checked={state.marketingAccepted}
                     onChange={(value) => update("marketingAccepted", value)}
                   >
-                    Соглашаюсь получать информационные рассылки от Антона Орешкина
+                    Соглашаюсь получать{" "}
+                    <a
+                      href="/consent"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors"
+                    >
+                      информационные рассылки
+                    </a>{" "}
+                    от Антона Орешкина
                   </Checkbox>
                 </div>
 

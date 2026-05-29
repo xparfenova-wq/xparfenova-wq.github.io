@@ -46,112 +46,133 @@ export default function PrivacyPage() {
               №&nbsp;152-ФЗ «О персональных данных» и настоящей Политикой.
             </p>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
               1. Состав обрабатываемых персональных данных
             </h2>
             <p>
-              Оператор обрабатывает следующие данные, добровольно предоставленные
-              пользователем через формы сайта: фамилия и имя; адрес электронной
-              почты или Telegram-никнейм; номер телефона (при указании);
-              наименование учебного заведения; текст обращения.
+              Оператор обрабатывает следующие персональные данные, добровольно
+              предоставленные пользователем через формы сайта:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>фамилия и имя;</li>
+              <li>адрес электронной почты;</li>
+              <li>Telegram-никнейм (при указании);</li>
+              <li>номер телефона (при указании);</li>
+              <li>наименование учебного заведения или организации (при указании);</li>
+              <li>текст обращения.</li>
+            </ul>
+            <p>
+              Оператор не обрабатывает специальные категории персональных данных,
+              указанные в ст.&nbsp;10 Федерального закона №&nbsp;152-ФЗ.
             </p>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
-              2. Цели обработки
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
+              2. Цели и правовые основания обработки
             </h2>
             <p>
-              Персональные данные обрабатываются в следующих целях: ответ на
-              запросы и заявки, поступившие через сайт; организация консультаций
-              и деловых встреч; направление информационных рассылок — только
-              при наличии отдельного согласия.
+              Персональные данные обрабатываются в следующих целях:
             </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>
+                ответ на запросы и заявки пользователей — основание: согласие
+                субъекта (ст.&nbsp;6 ч.&nbsp;1 п.&nbsp;1, ст.&nbsp;9
+                Федерального закона №&nbsp;152-ФЗ), а также необходимость
+                исполнения действий по запросу субъекта до заключения договора
+                (ст.&nbsp;6 ч.&nbsp;1 п.&nbsp;5);
+              </li>
+              <li>
+                организация консультаций, деловых встреч и звонков — основание:
+                согласие субъекта (ст.&nbsp;6 ч.&nbsp;1 п.&nbsp;1);
+              </li>
+              <li>
+                направление информационных рассылок — основание: отдельное
+                согласие субъекта (ст.&nbsp;9 Федерального закона
+                №&nbsp;152-ФЗ), предоставляемое исключительно добровольно.
+              </li>
+            </ul>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
-              3. Правовые основания
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
+              3. Порядок обработки и хранения
             </h2>
             <p>
-              Обработка осуществляется на основании: согласия субъекта
-              персональных данных (ст.&nbsp;6, ч.&nbsp;1, п.&nbsp;1;
-              ст.&nbsp;9 Федерального закона №&nbsp;152-ФЗ); необходимости
-              исполнения договора по запросу субъекта
-              (ст.&nbsp;6, ч.&nbsp;1, п.&nbsp;5); соблюдения требований
-              законодательства Российской Федерации (ст.&nbsp;6, ч.&nbsp;1,
-              п.&nbsp;2).
+              Оператор осуществляет сбор, запись, систематизацию, накопление,
+              хранение, уточнение, использование, обезличивание, блокирование,
+              удаление и уничтожение персональных данных с применением средств
+              автоматизации.
+            </p>
+            <p>
+              Персональные данные не передаются третьим лицам без согласия
+              субъекта, за исключением случаев, прямо предусмотренных
+              законодательством Российской Федерации. Оператор вправе
+              привлекать сервисы-обработчики (сервисы аналитики, планирования
+              встреч) на основании договоров, соответствующих требованиям
+              152-ФЗ.
+            </p>
+            <p>
+              Персональные данные хранятся в течение срока, необходимого для
+              достижения целей обработки, либо до момента отзыва согласия
+              субъектом, если иное не установлено законодательством.
             </p>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
-              4. Порядок обработки и хранения
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
+              4. Меры по защите персональных данных
             </h2>
             <p>
-              Оператор осуществляет сбор, запись, систематизацию, хранение,
-              использование и уничтожение персональных данных с применением
-              средств автоматизации. Данные не передаются третьим лицам без
-              согласия субъекта, за исключением случаев, предусмотренных
-              законодательством. Персональные данные хранятся до достижения цели
-              обработки или до отзыва согласия.
+              Оператор принимает необходимые правовые, организационные и
+              технические меры для защиты персональных данных от
+              неправомерного или случайного доступа, уничтожения, изменения,
+              блокирования, копирования, распространения и иных неправомерных
+              действий.
             </p>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
               5. Права субъекта персональных данных
             </h2>
+            <p>В соответствии с Федеральным законом №&nbsp;152-ФЗ вы вправе:</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>получить сведения об обработке ваших персональных данных;</li>
+              <li>потребовать уточнения, блокирования или уничтожения данных;</li>
+              <li>отозвать согласие на обработку персональных данных в любое время;</li>
+              <li>
+                обратиться с жалобой в Федеральную службу по надзору в сфере
+                связи, информационных технологий и массовых коммуникаций
+                (Роскомнадзор) или в суд.
+              </li>
+            </ul>
             <p>
-              Вы вправе: получить информацию об обработке ваших данных;
-              потребовать их уточнения, блокирования или уничтожения;
-              отозвать согласие в любой момент; обратиться в Роскомнадзор
-              или суд в случае нарушения ваших прав.
-            </p>
-            <p>
-              Для отзыва согласия или реализации иных прав направьте обращение
-              через форму на сайте или в Telegram:{" "}
-              <a
-                href="https://t.me/xeniapm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors"
-              >
+              Для реализации прав, включая отзыв согласия, направьте обращение
+              в Telegram:{" "}
+              <a href="https://t.me/antonoreshkin" target="_blank" rel="noopener noreferrer"
+                className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors">
+                @antonoreshkin
+              </a>{" "}
+              или{" "}
+              <a href="https://t.me/xeniapm" target="_blank" rel="noopener noreferrer"
+                className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors">
                 @xeniapm
               </a>
-              .
+              . Обращение рассматривается в сроки, установленные
+              ст.&nbsp;20–21 Федерального закона №&nbsp;152-ФЗ.
             </p>
 
-            <h2
-              className="font-display font-semibold text-obsidian-text pt-4"
-              style={{ fontSize: "18px", letterSpacing: "-0.02em" }}
-            >
+            <h2 className="font-display font-semibold text-obsidian-text pt-4" style={{ fontSize: "18px", letterSpacing: "-0.02em" }}>
               6. Контактные данные оператора
             </h2>
             <p>
-              ИП Орешкин Антон Вадимович, ИНН&nbsp;100123323420.
-              Сайт:&nbsp;antonoreshkin.ru. Telegram:&nbsp;
-              <a
-                href="https://t.me/antonoreshkin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors"
-              >
+              Индивидуальный предприниматель Орешкин Антон Вадимович<br />
+              ИНН: 100123323420<br />
+              Сайт: antonoreshkin.ru<br />
+              Telegram:{" "}
+              <a href="https://t.me/antonoreshkin" target="_blank" rel="noopener noreferrer"
+                className="underline underline-offset-2 text-obsidian-text hover:text-electric-orange transition-colors">
                 @antonoreshkin
               </a>
-              .
             </p>
 
             <p className="text-[14px] text-granite-gray/70 pt-4 border-t border-black/[0.06]">
-              Оператор вправе вносить изменения в настоящую Политику. Новая
-              редакция вступает в силу с момента её размещения на сайте.
+              Оператор вправе вносить изменения в настоящую Политику в
+              одностороннем порядке. Новая редакция вступает в силу с момента
+              её размещения на сайте.
             </p>
           </div>
         </article>
