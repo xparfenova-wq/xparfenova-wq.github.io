@@ -19,6 +19,7 @@ type ProjectPageProps = {
   title: string;
   lead: string;
   heroImage?: string;
+  heroCover?: string;
   heroBadge?: string;
   ctaLabel?: string;
   ctaHref?: string;
@@ -37,6 +38,7 @@ export function ProjectPage({
   title,
   lead,
   heroImage,
+  heroCover,
   heroBadge,
   ctaLabel = "Запланировать звонок",
   ctaHref = "/#contact",
@@ -82,8 +84,8 @@ export function ProjectPage({
               </div>
             </Reveal>
 
-            <div className="mt-10 grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-end">
-              <div>
+            <div className={heroCover ? "" : "grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-end mt-10"}>
+              <div className={heroCover ? "mt-10 max-w-190" : ""}>
                 {heroBadge ? (
                   <Reveal>
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-alabaster-gray text-[12px] uppercase tracking-[0.18em] text-obsidian-text font-medium mb-6">
@@ -134,7 +136,7 @@ export function ProjectPage({
                 </Reveal>
               </div>
 
-              {heroImage ? (
+              {heroImage && !heroCover ? (
                 <Reveal delay={0.1}>
                   <div className="relative aspect-[4/5] w-full max-w-[460px] lg:max-w-none lg:ml-auto">
                     <div className="relative w-full h-full rounded-[40px] overflow-hidden shadow-humble">
@@ -151,6 +153,21 @@ export function ProjectPage({
                 </Reveal>
               ) : null}
             </div>
+
+            {heroCover ? (
+              <Reveal delay={0.1}>
+                <div className="mt-10 relative aspect-video w-full rounded-4xl overflow-hidden shadow-humble">
+                  <Image
+                    src={heroCover}
+                    alt={title}
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
+              </Reveal>
+            ) : null}
           </div>
         </section>
 

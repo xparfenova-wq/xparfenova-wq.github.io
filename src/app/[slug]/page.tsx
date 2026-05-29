@@ -91,6 +91,8 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
   assist: {
     intent: "application",
     title: "Заявка в сообщество",
+    subtitle:
+      "Расскажите кратко о себе, вузе и интересах. Откроем доступ в сообщество.",
   },
   "forum-group": {
     intent: "application",
@@ -132,7 +134,8 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       category={category}
       title={project.name}
       lead={project.long}
-      heroImage={project.cover}
+      heroImage={project.heroCover ? undefined : project.cover}
+      heroCover={project.heroCover}
       heroBadge={project.badge}
       backHref={backHref}
       formIntent={form.intent}

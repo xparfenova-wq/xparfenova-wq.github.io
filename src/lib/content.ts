@@ -70,6 +70,7 @@ export type Project = {
   short: string;
   long: string;
   cover: string;
+  heroCover?: string;
   badge?: string;
   hideName?: boolean;
 };
@@ -121,6 +122,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     long:
       "Работаю с двумя группами. Старшеклассникам — помогаю поступить в МФТИ и другие топовые вузы через олимпиады и ЕГЭ. Студентам — помогаю найти своё направление и запустить первый проект.",
     cover: "/photos/cover-mentoring.jpg",
+    heroCover: "/photos/hero-mentoring.jpg",
     hideName: true,
   },
   {
