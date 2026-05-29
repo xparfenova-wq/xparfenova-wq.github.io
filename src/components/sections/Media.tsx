@@ -158,13 +158,13 @@ export function Media() {
         className="relative rounded-[40px] overflow-hidden bg-ink-black"
       >
         <div className="grid lg:grid-cols-2">
-          <div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[460px]">
+          <div className="relative aspect-[3/4] lg:aspect-auto lg:min-h-[460px]">
             <Image
               src="/photos/film-premiere.jpg"
               alt="Премьера фильма про МФТИ"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain object-left-bottom"
+              className="object-cover object-top lg:object-contain lg:object-left-bottom"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent lg:bg-gradient-to-r" />
           </div>
