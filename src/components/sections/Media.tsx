@@ -298,26 +298,16 @@ export function Media() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.04, ease: EASE }}
-              className={`relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-humble${img.objectFit === "contain" ? " bg-ink-black" : ""}`}
+              className="relative aspect-[5/7] rounded-[24px] overflow-hidden shadow-humble"
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, 25vw"
-                className={img.objectFit === "contain" ? "object-contain" : "object-cover"}
+                className="object-cover"
                 style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
               />
-              {img.objectFit === "contain" && (
-                <div
-                  aria-hidden
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background:
-                      "radial-gradient(ellipse at center, transparent 55%, rgba(10,10,15,0.85) 100%)",
-                  }}
-                />
-              )}
             </motion.div>
           ))}
         </div>
