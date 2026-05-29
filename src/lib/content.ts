@@ -250,7 +250,7 @@ export const FILM_GUESTS: {
   },
 };
 
-export const PREMIERE_GALLERY = [
+export const PREMIERE_GALLERY: { src: string; alt: string; objectPosition?: string }[] = [
   { src: "/photos/film-premiere.jpg", alt: "Премьера фильма про МФТИ, зрители в зале" },
   { src: "/photos/portrait-1.jpg", alt: "Антон Орешкин на сцене премьеры" },
   { src: "/photos/portrait-2.jpg", alt: "Антон на премьере фильма" },
