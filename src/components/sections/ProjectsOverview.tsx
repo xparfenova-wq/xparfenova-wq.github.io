@@ -35,11 +35,16 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
           )}
         </div>
         <div className="p-6 flex flex-col gap-2">
-          <div className="text-[12px] uppercase tracking-[0.16em] text-granite-gray font-medium">
-            {p.tag}
+          <div className="flex items-center justify-between gap-3">
+            <div className="text-[12px] uppercase tracking-[0.16em] text-granite-gray font-medium">
+              {p.tag}
+            </div>
+            {p.hideName && (
+              <ArrowUpRight className="size-5 text-granite-gray group-hover:text-electric-orange transition-colors shrink-0" />
+            )}
           </div>
-          <div className="flex items-start justify-between gap-3">
-            {!p.hideName && (
+          {!p.hideName && (
+            <div className="flex items-start justify-between gap-3">
               <h3
                 className={
                   p.id === "medialab"
@@ -50,9 +55,9 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
               >
                 {p.name}
               </h3>
-            )}
-            <ArrowUpRight className="size-5 text-granite-gray group-hover:text-electric-orange transition-colors flex-shrink-0 mt-1 ml-auto" />
-          </div>
+              <ArrowUpRight className="size-5 text-granite-gray group-hover:text-electric-orange transition-colors shrink-0 mt-1" />
+            </div>
+          )}
           <p className="text-[14px] text-granite-gray leading-[1.5]">{p.short}</p>
         </div>
       </Link>
