@@ -39,17 +39,19 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             {p.tag}
           </div>
           <div className="flex items-start justify-between gap-3">
-            <h3
-              className={
-                p.id === "medialab"
-                  ? "font-display font-semibold text-shimmer"
-                  : "font-display font-semibold text-obsidian-text"
-              }
-              style={{ fontSize: "21px", lineHeight: 1.15, letterSpacing: "-0.02em" }}
-            >
-              {p.name}
-            </h3>
-            <ArrowUpRight className="size-5 text-granite-gray group-hover:text-electric-orange transition-colors flex-shrink-0 mt-1" />
+            {!p.hideName && (
+              <h3
+                className={
+                  p.id === "medialab"
+                    ? "font-display font-semibold text-shimmer"
+                    : "font-display font-semibold text-obsidian-text"
+                }
+                style={{ fontSize: "21px", lineHeight: 1.15, letterSpacing: "-0.02em" }}
+              >
+                {p.name}
+              </h3>
+            )}
+            <ArrowUpRight className="size-5 text-granite-gray group-hover:text-electric-orange transition-colors flex-shrink-0 mt-1 ml-auto" />
           </div>
           <p className="text-[14px] text-granite-gray leading-[1.5]">{p.short}</p>
         </div>
