@@ -297,14 +297,14 @@ export function Media() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.04, ease: EASE }}
-              className="relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-humble"
+              className={`relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-humble${img.objectFit === "contain" ? " bg-ink-black" : ""}`}
             >
               <Image
                 src={img.src}
                 alt={img.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, 25vw"
-                className="object-cover"
+                className={img.objectFit === "contain" ? "object-contain p-3" : "object-cover"}
                 style={img.objectPosition ? { objectPosition: img.objectPosition } : undefined}
               />
             </motion.div>
