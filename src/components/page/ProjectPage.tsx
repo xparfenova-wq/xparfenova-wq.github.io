@@ -156,7 +156,7 @@ export function ProjectPage({
 
             {heroCover ? (
               <Reveal delay={0.1}>
-                <div className="mt-10 relative aspect-video w-full rounded-4xl overflow-hidden shadow-humble">
+                <div className="mt-10 relative aspect-video max-w-[900px] mx-auto rounded-4xl overflow-hidden shadow-humble">
                   <Image
                     src={heroCover}
                     alt={title}
