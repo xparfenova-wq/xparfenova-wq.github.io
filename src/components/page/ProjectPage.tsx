@@ -63,7 +63,7 @@ export function ProjectPage({
                 "radial-gradient(circle, #ff4000 0%, transparent 70%)",
             }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-6 pb-16 sm:pb-20">
+          <div className={`relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-6 ${heroCover ? "pb-8 sm:pb-10" : "pb-16 sm:pb-20"}`}>
             <Reveal>
               <div className="flex flex-wrap items-center gap-3 sm:gap-4">
                 <Link
