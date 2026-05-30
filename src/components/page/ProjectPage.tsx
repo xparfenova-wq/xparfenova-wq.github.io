@@ -150,6 +150,7 @@ export function ProjectPage({
                   </div>
                 </Reveal>
               ) : null}
+            </div>
           </div>
         </section>
 
