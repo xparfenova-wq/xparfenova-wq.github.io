@@ -65,7 +65,7 @@ export function About() {
             {STORY_SHORT.body}
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-x-8 gap-y-5">
+          <div className="mt-9 grid grid-cols-3 gap-x-5 gap-y-5">
             {[
               { value: "21", label: "год" },
               { value: "3 курс", label: "МФТИ × Сколково" },
@@ -78,7 +78,6 @@ export function About() {
                     fontSize: "clamp(36px, 4vw, 52px)",
                     lineHeight: 1,
                     letterSpacing: "-0.03em",
-                    whiteSpace: "nowrap",
                   }}
                 >
                   {m.value}

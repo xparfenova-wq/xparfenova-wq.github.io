@@ -134,8 +134,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       category={category}
       title={project.name}
       lead={project.long}
-      heroImage={project.heroCover ? undefined : project.cover}
-      heroCover={project.heroCover}
+      heroImage={project.heroCover ?? (!project.hideName ? project.cover : undefined)}
       heroBadge={project.badge}
       backHref={backHref}
       formIntent={form.intent}
