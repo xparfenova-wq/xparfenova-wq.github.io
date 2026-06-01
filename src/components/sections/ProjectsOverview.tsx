@@ -59,6 +59,17 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             </div>
           )}
           <p className="text-[14px] text-granite-gray leading-[1.5]">{p.short}</p>
+          {p.teamPhoto && (
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden mt-1">
+              <Image
+                src={p.teamPhoto}
+                alt={`${p.name} команда`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 380px"
+                className="object-cover"
+              />
+            </div>
+          )}
         </div>
       </Link>
     </motion.div>

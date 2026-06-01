@@ -73,9 +73,9 @@ export function About() {
             ].map((m) => (
               <div key={m.label} className="flex flex-col gap-1">
                 <div
-                  className="font-display font-semibold text-electric-orange"
+                  className="font-display font-semibold text-electric-orange whitespace-nowrap"
                   style={{
-                    fontSize: "clamp(36px, 4vw, 52px)",
+                    fontSize: "clamp(28px, 4vw, 52px)",
                     lineHeight: 1,
                     letterSpacing: "-0.03em",
                   }}
