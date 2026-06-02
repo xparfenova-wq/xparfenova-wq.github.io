@@ -136,7 +136,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       heroImage={
         slug === "vending"
           ? "/photos/vending-photo.jpg"
-          : ["it-studio", "automy-ai", "assist", "medialab"].includes(slug)
+          : ["it-studio", "automy-ai", "assist", "medialab", "mentoring"].includes(slug)
           ? undefined
           : project.cover
       }
