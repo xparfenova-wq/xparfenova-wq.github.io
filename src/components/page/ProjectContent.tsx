@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Sparkles, Users, Briefcase, Award, Lightbulb, MessageSquare, type LucideIcon } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
@@ -183,6 +184,17 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "automy-ai":
       return (
         <>
+          <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 pt-2 pb-0">
+            <div className="relative w-full aspect-video rounded-[28px] overflow-hidden">
+              <Image
+                src="/photos/automy-team.png"
+                alt="Команда Automy AI"
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-cover"
+              />
+            </div>
+          </div>
           <Section eyebrow="Что это" title="Практика применения нейросетей">
             <p>
               Automy AI — курс по применению AI в ежедневной работе. Практические
