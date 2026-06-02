@@ -10,7 +10,8 @@ export type ApplicationFormIntent =
   | "consultation"
   | "application"
   | "partnership"
-  | "volunteer";
+  | "volunteer"
+  | "phone-only";
 
 type ApplicationFormProps = {
   title: string;
@@ -111,6 +112,18 @@ function Checkbox({
   );
 }
 
+function formatRuPhone(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  if (!digits) return "";
+  const local = digits[0] === "7" || digits[0] === "8" ? digits.slice(1) : digits;
+  let result = "+7";
+  if (local.length > 0) result += " (" + local.slice(0, 3);
+  if (local.length >= 3) result += ") " + local.slice(3, 6);
+  if (local.length >= 6) result += "-" + local.slice(6, 8);
+  if (local.length >= 8) result += "-" + local.slice(8, 10);
+  return result;
+}
+
 export function ApplicationForm({
   title,
   subtitle,
@@ -122,6 +135,7 @@ export function ApplicationForm({
   const [submitted, setSubmitted] = useState(false);
 
   const showInstitutionField = intent === "application";
+  const isPhoneOnly = intent === "phone-only";
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
     setState((prev) => ({ ...prev, [key]: value }));
@@ -210,21 +224,31 @@ export function ApplicationForm({
                   />
                 </Field>
 
-                <Field
-                  label="Telegram-ник или email"
-                  htmlFor="application-contact"
-                  required
-                >
-                  <input
-                    id="application-contact"
-                    type="text"
-                    required
-                    value={state.contact}
-                    onChange={(event) => update("contact", event.target.value)}
-                    placeholder="@username или name@example.com"
-                    className={inputBase}
-                  />
-                </Field>
+                {isPhoneOnly ? (
+                  <Field label="Номер телефона" htmlFor="application-contact" required>
+                    <input
+                      id="application-contact"
+                      type="tel"
+                      required
+                      value={state.contact}
+                      onChange={(event) => update("contact", formatRuPhone(event.target.value))}
+                      placeholder="+7 (___) ___-__-__"
+                      className={inputBase}
+                    />
+                  </Field>
+                ) : (
+                  <Field label="Telegram-ник или email" htmlFor="application-contact" required>
+                    <input
+                      id="application-contact"
+                      type="text"
+                      required
+                      value={state.contact}
+                      onChange={(event) => update("contact", event.target.value)}
+                      placeholder="@username или name@example.com"
+                      className={inputBase}
+                    />
+                  </Field>
+                )}
 
                 {showInstitutionField ? (
                   <Field label="Учебное заведение" htmlFor="application-institution">
@@ -239,17 +263,19 @@ export function ApplicationForm({
                   </Field>
                 ) : null}
 
-                <Field label="Опишите запрос" htmlFor="application-message" required>
-                  <textarea
-                    id="application-message"
-                    required
-                    rows={5}
-                    value={state.message}
-                    onChange={(event) => update("message", event.target.value)}
-                    placeholder="Коротко: задача, контекст, ожидаемый результат"
-                    className={cn(inputBase, "resize-y min-h-[120px]")}
-                  />
-                </Field>
+                {!isPhoneOnly && (
+                  <Field label="Опишите запрос" htmlFor="application-message" required>
+                    <textarea
+                      id="application-message"
+                      required
+                      rows={5}
+                      value={state.message}
+                      onChange={(event) => update("message", event.target.value)}
+                      placeholder="Коротко: задача, контекст, ожидаемый результат"
+                      className={cn(inputBase, "resize-y min-h-[120px]")}
+                    />
+                  </Field>
+                )}
 
                 <div className="flex flex-col gap-3 pt-2">
                   <Checkbox

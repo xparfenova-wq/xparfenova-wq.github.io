@@ -77,10 +77,9 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
       "Расскажите кратко о себе и задаче. Свяжемся и расскажем про ближайший поток.",
   },
   vending: {
-    intent: "partnership",
-    title: "Запрос по сети аппаратов",
-    subtitle:
-      "Сеть продаётся. Опишите интерес, обсудим условия.",
+    intent: "phone-only",
+    title: "Интерес к сети аппаратов",
+    subtitle: "Оставьте имя и телефон — свяжемся и обсудим условия",
   },
   donation: {
     intent: "partnership",
