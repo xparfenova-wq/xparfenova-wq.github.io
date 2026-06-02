@@ -82,7 +82,7 @@ export function ProjectPage({
               </div>
             </Reveal>
 
-            <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-end mt-10">
+            <div className={`mt-10${heroImage ? " grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-end" : ""}`}>
               <div>
                 {heroBadge ? (
                   <Reveal>

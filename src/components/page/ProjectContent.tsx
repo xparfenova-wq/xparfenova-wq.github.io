@@ -381,6 +381,17 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "vending":
       return (
         <>
+          <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 pt-2 pb-0">
+            <div className="relative w-full aspect-video rounded-[28px] overflow-hidden">
+              <Image
+                src="/photos/vending-photo.jpg"
+                alt="Сеть кофейных аппаратов"
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-cover"
+              />
+            </div>
+          </div>
           <Section eyebrow="Что это" title="Сеть кофейных автоматов в Петрозаводске">
             <p>
               Мой первый офлайн-бизнес. Сеть кофейных аппаратов в Петрозаводске
