@@ -78,7 +78,7 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
   },
   vending: {
     intent: "phone-only",
-    title: "Интерес к сети аппаратов",
+    title: "Приобрести сеть",
     subtitle: "Оставьте имя и телефон — свяжемся и обсудим условия",
   },
   donation: {
