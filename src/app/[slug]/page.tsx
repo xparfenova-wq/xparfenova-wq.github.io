@@ -60,7 +60,7 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
   },
   hr: {
     intent: "consultation",
-    title: "Найти сотрудника",
+    title: "Найти профессионала",
     subtitle:
       "Опишите вакансию: роль, грейд, формат работы. Подберём кандидатов из воронки и сообщества.",
   },
@@ -134,7 +134,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       category={category}
       title={project.name}
       lead={project.long}
-      heroImage={project.heroCover ?? (!project.hideName ? project.cover : undefined)}
+      heroImage={project.cover}
       heroBadge={project.badge}
       backHref={backHref}
       formIntent={form.intent}
