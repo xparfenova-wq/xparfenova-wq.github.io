@@ -142,6 +142,17 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "it-studio":
       return (
         <>
+          <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 pt-2 pb-0">
+            <div className="relative w-full aspect-video rounded-[28px] overflow-hidden">
+              <Image
+                src="/photos/synapt-team.png"
+                alt="Команда Synapt"
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-cover"
+              />
+            </div>
+          </div>
           <Section eyebrow="Что делаем" title="AI/IT разработка для бизнеса">
             <p>
               Synapt собирает команду под конкретную задачу: продуктовый
@@ -452,6 +463,17 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "assist":
       return (
         <>
+          <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 pt-2 pb-0">
+            <div className="relative w-full aspect-video rounded-[28px] overflow-hidden">
+              <Image
+                src="/photos/assist-team.jpg"
+                alt="АССИСТ+"
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-cover"
+              />
+            </div>
+          </div>
           <Section eyebrow="Что это" title="Сообщество молодёжи титульных вузов">
             <p>
               АССИСТ+ — сообщество студентов МФТИ, ВШЭ, МГИМО, СПбГУ и других
