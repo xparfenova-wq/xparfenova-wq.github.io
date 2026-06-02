@@ -70,6 +70,17 @@ export function ProjectContent({ slug }: { slug: string }) {
     case "medialab":
       return (
         <>
+          <div className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 pt-2 pb-0">
+            <div className="relative w-full aspect-video rounded-[28px] overflow-hidden">
+              <Image
+                src="/photos/medialab-team.png"
+                alt="Oreshkin Media Lab"
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-cover object-top"
+              />
+            </div>
+          </div>
           <Section eyebrow="Что делаем" title="Полный цикл видео-продакшна">
             <p>
               Снимаем в любых форматах — от презентационных и имиджевых роликов

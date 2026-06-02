@@ -134,7 +134,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       category={category}
       title={project.name}
       lead={project.long}
-      heroImage={project.cover}
+      heroImage={["it-studio", "automy-ai", "assist", "medialab"].includes(slug) ? undefined : project.cover}
       heroBadge={project.badge}
       backHref={backHref}
       formIntent={form.intent}
