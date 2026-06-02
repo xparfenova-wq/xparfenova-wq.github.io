@@ -72,6 +72,7 @@ export type Project = {
   cover: string;
   badge?: string;
   teamPhoto?: string;
+  hideName?: boolean;
 };
 
 export const PROJECTS_COMMERCIAL: Project[] = [
@@ -84,7 +85,8 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Видеоконтент для частных, государственных и медиапроектов.",
     long:
       "Снимаем документальные фильмы, корпоративные видео, имиджевые ролики, репортажи, ивенты и форматы для соцсетей. Главный кейс 2025 года — полнометражный фильм про МФТИ с предпринимателями Forbes и нобелевским лауреатом Константином Новосёловым. Премьера прошла в Долгопрудном, собрала 400 человек.",
-    cover: "/photos/medialab-cover.png",
+    cover: "/photos/cover-medialab.jpg",
+    hideName: true,
   },
   {
     id: "it-studio",
@@ -95,8 +97,9 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Веб, мобильные и AI-решения под конкретную задачу.",
     long:
       "AI и IT разработка: предлагаем веб, мобильные и AI-решения бизнесам для роста в эпоху автоматизаций. Собираем команды под актуальные задачи и строим работающие продукты под ключ — от прототипа до полной разработки и отлаженной работы. Сначала спецификация с фиксированными сроками и ценой, потом разработка. Код остаётся у клиента.",
-    cover: "/photos/portrait-1.jpg",
+    cover: "/photos/cover-synapt.jpg",
     teamPhoto: "/photos/synapt-team.png",
+    hideName: true,
   },
   {
     id: "hr",
@@ -107,7 +110,8 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Подбираем специалистов для бизнеса: ассистентов, маркетологов, топ-менеджеров. Работаем с сообществами МФТИ, ВШЭ, МГИМО и других ведущих вузов России.",
     long:
       "Подбираем специалистов для предпринимателей: бизнес-ассистентов, операционных менеджеров, маркетологов, топ-менеджеров. Работаем с сообществом студентов МФТИ, ВШЭ, МГИМО и других ведущих вузов России — это даёт доступ к талантам, которых ещё нет на открытом рынке.",
-    cover: "/photos/assist-plus.jpg",
+    cover: "/photos/cover-hr.jpg",
+    hideName: true,
   },
   {
     id: "mentoring",
@@ -118,7 +122,8 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Поступление в титульные вузы и старт в предпринимательстве.",
     long:
       "Работаю с двумя группами. Старшеклассникам — помогаю поступить в МФТИ и другие топовые вузы через олимпиады и ЕГЭ. Студентам — помогаю найти своё направление и запустить первый проект.",
-    cover: "/photos/portrait-3.jpg",
+    cover: "/photos/cover-mentoring.jpg",
+    hideName: true,
   },
   {
     id: "automy-ai",
@@ -129,8 +134,9 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Обучаем работе с нейросетями и ведём Telegram-канал об AI.",
     long:
       "Automy AI — практический курс по применению AI в ежедневной работе и Telegram-канал для тех, кто хочет встроить нейросети в рабочие и личные процессы. Помогаем делать больше, быстрее, лучше — и уставать меньше.",
-    cover: "/photos/portrait-2.jpg",
+    cover: "/photos/cover-automy-ai.jpg",
     teamPhoto: "/photos/automy-team.png",
+    hideName: true,
   },
   {
     id: "vending",
@@ -141,7 +147,8 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     short: "Действующая сеть в родном городе.",
     long:
       "Первый офлайн-бизнес — сеть кофейных аппаратов в Петрозаводске. Работает стабильно несколько лет, процессы отлажены.",
-    cover: "/photos/about-waterfall.jpg",
+    cover: "/photos/cover-vending.jpg",
+    hideName: true,
   },
 ];
 
