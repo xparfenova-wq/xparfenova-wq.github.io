@@ -41,8 +41,7 @@ export function Contact() {
               className="mt-5 text-canvas-white/70 max-w-[460px]"
               style={{ fontSize: "16px", lineHeight: 1.55 }}
             >
-              Работаю с проектами в IT-разработке, AI, образовании, медиа, менторском сопровождении и подборе специалистов.
-            </p>
+              Работаю с проектами в IT-разработке, AI, образовании, медиа, менторском сопровождении и подборе специалистов</p>
 
             <div className="mt-8">
               <div className="text-[11px] uppercase tracking-[0.2em] text-canvas-white/60 font-medium mb-4">

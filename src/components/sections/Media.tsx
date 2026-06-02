@@ -184,8 +184,7 @@ export function Media() {
               Полнометражный фильм с предпринимателями Forbes и нобелевским лауреатом.
             </h3>
             <p className="text-[14px] text-canvas-white/75 mb-5 leading-relaxed">
-              «Как учат гениев в МФТИ»: 11 героев, нобелевский лауреат, основатели Hoff и Технониколь, ректор МФТИ.
-            </p>
+              «Как учат гениев в МФТИ»: 11 героев, нобелевский лауреат, основатели Hoff и Технониколь, ректор МФТИ</p>
 
             <Link
               href={SITE.filmFullUrl}
@@ -241,8 +240,7 @@ export function Media() {
           <p className="mt-3 text-[15px] text-granite-gray leading-relaxed max-w-[640px]">
             Премьеру в Долгопрудном собрал и провёл лично. Программа: показ
             фильма, панельная дискуссия с участниками, съёмочная группа
-            телевидения, нетворкинг.
-          </p>
+            телевидения, нетворкинг</p>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-4 mb-6">

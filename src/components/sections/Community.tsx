@@ -116,8 +116,7 @@ export function Community() {
             <p className="text-[14px] text-granite-gray leading-[1.55] mb-5">
               Сообщество выпускников МФТИ. Поддерживает студентов и
               преподавателей института. Подробности моего участия открыты
-              по ссылке.
-            </p>
+              по ссылке</p>
             <Link
               href={PARTNER_HIGHLIGHT.url}
               target="_blank"
