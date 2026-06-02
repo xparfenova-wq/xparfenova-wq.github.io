@@ -60,7 +60,7 @@ const FORM_BY_PROJECT: Record<string, FormConfig> = {
   },
   hr: {
     intent: "consultation",
-    title: "Найти профессионала",
+    title: "Найти специалиста",
     subtitle:
       "Опишите вакансию: роль, грейд, формат работы. Подберём кандидатов из воронки и сообщества.",
   },
