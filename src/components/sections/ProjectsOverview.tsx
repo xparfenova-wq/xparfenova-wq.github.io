@@ -34,6 +34,17 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             </span>
           )}
         </div>
+        {p.id === "medialab" && (
+          <div className="overflow-hidden bg-electric-orange h-7 flex items-center">
+            <div className="animate-oml-marquee flex whitespace-nowrap">
+              {[0, 1].map((i) => (
+                <span key={i} className="text-canvas-white text-[11px] font-medium tracking-[0.18em] uppercase px-6">
+                  ORESHKIN MEDIA LAB · ДОКУМЕНТАЛЬНЫЕ ФИЛЬМЫ · КОРПОРАТИВНОЕ ВИДЕО · ИВЕНТЫ · ПОДКАСТЫ · РЕПОРТАЖИ ·&nbsp;
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="p-6 flex flex-col gap-2">
           <div className="flex items-center justify-between gap-3">
             <div className="text-[12px] uppercase tracking-[0.16em] text-granite-gray font-medium">

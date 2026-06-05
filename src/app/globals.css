@@ -130,6 +130,16 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
+/* Marquee / ticker for Media Lab card */
+@keyframes oml-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-oml-marquee {
+  animation: oml-marquee 16s linear infinite;
+  will-change: transform;
+}
+
 /* Shimmer effect for Oreshkin Media Lab title — soft sun-flare */
 @keyframes oml-shimmer {
   0% { background-position: -200% 0; }
