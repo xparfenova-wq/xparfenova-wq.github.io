@@ -12,6 +12,25 @@ export function About() {
       id="about"
       className="py-16 sm:py-20 lg:py-24 max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 scroll-mt-24"
     >
+      {/* Заголовок над фото — только на мобилке */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.7, ease: EASE }}
+        className="lg:hidden mb-6"
+      >
+        <div className="text-[12px] uppercase tracking-[0.22em] text-electric-orange-text font-medium mb-4">
+          Мой опыт
+        </div>
+        <h2
+          className="font-display font-semibold text-obsidian-text"
+          style={{ fontSize: "clamp(28px, 8vw, 44px)", lineHeight: 1.05, letterSpacing: "-0.035em" }}
+        >
+          {STORY_SHORT.title}
+        </h2>
+      </motion.div>
+
       <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,19 +59,18 @@ export function About() {
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
         >
-          <div className="text-[12px] uppercase tracking-[0.22em] text-electric-orange-text font-medium mb-5">
-            Обо мне
+          {/* Заголовок — только на десктопе */}
+          <div className="hidden lg:block">
+            <div className="text-[12px] uppercase tracking-[0.22em] text-electric-orange-text font-medium mb-5">
+              Мой опыт
+            </div>
+            <h2
+              className="font-display font-semibold text-obsidian-text mb-6"
+              style={{ fontSize: "clamp(28px, 4vw, 44px)", lineHeight: 1.05, letterSpacing: "-0.035em" }}
+            >
+              {STORY_SHORT.title}
+            </h2>
           </div>
-          <h2
-            className="font-display font-semibold text-obsidian-text mb-6"
-            style={{
-              fontSize: "clamp(28px, 4vw, 44px)",
-              lineHeight: 1.05,
-              letterSpacing: "-0.035em",
-            }}
-          >
-            {STORY_SHORT.title}
-          </h2>
           <p
             className="text-granite-gray"
             style={{
@@ -64,6 +82,9 @@ export function About() {
           >
             {STORY_SHORT.body}
           </p>
+          <p className="mt-3 text-[12px] text-granite-gray/70 leading-snug">
+            * 302 балла с учётом индивидуальных достижений и олимпиад
+          </p>
 
           <div className="mt-9 grid grid-cols-3 gap-x-5 gap-y-5">
             {[
@@ -74,11 +95,7 @@ export function About() {
               <div key={m.label} className="flex flex-col gap-1">
                 <div
                   className="font-display font-semibold text-electric-orange whitespace-nowrap"
-                  style={{
-                    fontSize: "clamp(28px, 4vw, 52px)",
-                    lineHeight: 1,
-                    letterSpacing: "-0.03em",
-                  }}
+                  style={{ fontSize: "clamp(28px, 4vw, 52px)", lineHeight: 1, letterSpacing: "-0.03em" }}
                 >
                   {m.value}
                 </div>
