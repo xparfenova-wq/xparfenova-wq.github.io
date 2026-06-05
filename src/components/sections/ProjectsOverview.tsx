@@ -59,6 +59,10 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
             </div>
           )}
           <p className="text-[14px] text-granite-gray leading-[1.5]">{p.short}</p>
+          <div className="flex items-center gap-1 mt-1">
+            <span className="text-[12px] font-medium text-electric-orange-text group-hover:text-electric-orange transition-colors">Подробнее</span>
+            <ArrowUpRight className="size-3.5 text-electric-orange-text group-hover:text-electric-orange transition-colors" />
+          </div>
         </div>
       </Link>
     </motion.div>

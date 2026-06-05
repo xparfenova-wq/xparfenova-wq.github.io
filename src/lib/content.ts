@@ -14,22 +14,10 @@ export const SITE = {
     base: "https://cal.com/антон-орешкин-sw75hx",
     types: [
       {
-        slug: "15min",
-        title: "Знакомство",
-        length: "15 минут",
-        description: "Короткий разговор, контекст и формат сотрудничества",
-      },
-      {
         slug: "30min",
-        title: "Обсудить проект",
+        title: "Обсудить сотрудничество",
         length: "30 минут",
         description: "Разбор задачи и понимание следующих шагов",
-      },
-      {
-        slug: "60min",
-        title: "Глубокая встреча",
-        length: "1 час",
-        description: "Подробное обсуждение проекта, запроса или партнёрства",
       },
     ],
   },
@@ -47,8 +35,7 @@ export const NAV = [
   { label: "Коммерческие", href: "/#commercial" },
   { label: "Социальные", href: "/#social" },
   { label: "Медиа", href: "/#media" },
-  { label: "Обо мне", href: "/#about" },
-  { label: "Связаться", href: "/#contact" },
+  { label: "Мой опыт", href: "/#about" },
 ];
 
 // Партнёры, которые упоминаются в Hero/Media как floating-карточки
@@ -149,6 +136,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
       "Первый офлайн-бизнес — сеть кофейных аппаратов в Петрозаводске. Работает стабильно несколько лет, процессы отлажены",
     cover: "/photos/cover-vending.jpg",
     hideName: true,
+    badge: "Продаётся",
   },
 ];
 

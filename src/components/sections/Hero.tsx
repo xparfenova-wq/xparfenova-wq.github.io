@@ -87,7 +87,7 @@ export function Hero() {
               >
                 <span className="inline-flex items-center gap-2">
                   <Calendar className="size-4" />
-                  Запланировать звонок
+                  Обсудить сотрудничество
                 </span>
                 <ArrowRight className="size-4" />
               </Link>
@@ -119,7 +119,7 @@ export function Hero() {
               className="absolute -bottom-5 -left-3 sm:-bottom-7 sm:-left-6 bg-canvas-white rounded-3xl px-5 py-3.5 shadow-humble flex items-center gap-4"
             >
               <div className="text-[10px] uppercase tracking-[0.18em] text-granite-gray font-medium mr-1">
-                Учусь
+                Студент
               </div>
               {HERO_LOGOS.map((l) => (
                 <div

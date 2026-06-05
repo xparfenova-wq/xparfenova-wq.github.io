@@ -75,7 +75,7 @@ export function Nav() {
             href="/#contact"
             className="ml-4 inline-flex items-center px-4 py-2 rounded-full bg-ink-black text-canvas-white text-[14px] font-medium hover:bg-obsidian-text transition-colors"
           >
-            Запланировать звонок
+            Обсудить сотрудничество
           </Link>
         </nav>
 
