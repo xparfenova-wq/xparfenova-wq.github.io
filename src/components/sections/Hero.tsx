@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24 overflow-hidden"
+      className="relative pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24 overflow-hidden"
     >
       <div
         aria-hidden
@@ -44,7 +44,7 @@ export function Hero() {
               className="mt-7 max-w-[480px] text-granite-gray"
               style={{ fontSize: "16px", lineHeight: 1.55, fontWeight: 500 }}
             >
-              Студент МФТИ × Сколково. Строю проекты в IT, образовании и медиа — стремлюсь быть вкладом в жизни людей и менять их к лучшему.
+              Студент МФТИ × Сколково. Строю проекты в IT, образовании и медиа. Стремлюсь быть вкладом в жизни людей и менять их к лучшему.
             </motion.p>
 
             <motion.div

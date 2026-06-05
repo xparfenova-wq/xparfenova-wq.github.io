@@ -44,7 +44,7 @@ export const HERO_LOGOS = [
   {
     name: "Московская школа управления Сколково",
     short: "Сколково",
-    logo: "/logos/skolkovo-icon.png",
+    logo: "/logos/skolkovo-emblem.png",
   },
 ];
 
@@ -81,7 +81,7 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     category: "commercial",
     name: "Synapt",
     tag: "IT и AI-разработка под задачу",
-    short: "Веб, мобильные и AI-решения под конкретную задачу",
+    short: "Веб, мобильные, AI и AR-решения под конкретную задачу бизнеса",
     long:
       "AI и IT разработка: предлагаем веб, мобильные и AI-решения бизнесам для роста в эпоху автоматизаций. Собираем команды под актуальные задачи и строим работающие продукты под ключ — от прототипа до полной разработки и отлаженной работы. Сначала спецификация с фиксированными сроками и ценой, потом разработка. Код остаётся у клиента",
     cover: "/photos/cover-synapt.jpg",
@@ -101,18 +101,6 @@ export const PROJECTS_COMMERCIAL: Project[] = [
     hideName: true,
   },
   {
-    id: "mentoring",
-    slug: "mentoring",
-    category: "commercial",
-    name: "Менторское сопровождение",
-    tag: "Школьники и студенты",
-    short: "Поступление в титульные вузы и старт в предпринимательстве",
-    long:
-      "Работаю с двумя группами. Старшеклассникам — помогаю поступить в МФТИ и другие топовые вузы через олимпиады и ЕГЭ. Студентам — помогаю найти своё направление и запустить первый проект",
-    cover: "/photos/cover-mentoring.jpg",
-    hideName: true,
-  },
-  {
     id: "automy-ai",
     slug: "automy-ai",
     category: "commercial",
@@ -123,6 +111,18 @@ export const PROJECTS_COMMERCIAL: Project[] = [
       "Automy AI — практический курс по применению AI в ежедневной работе и Telegram-канал для тех, кто хочет встроить нейросети в рабочие и личные процессы. Помогаем делать больше, быстрее, лучше — и уставать меньше",
     cover: "/photos/cover-automy-ai.jpg",
     teamPhoto: "/photos/automy-team.png",
+    hideName: true,
+  },
+  {
+    id: "mentoring",
+    slug: "mentoring",
+    category: "commercial",
+    name: "Менторское сопровождение",
+    tag: "Школьники и студенты",
+    short: "Поступление в титульные вузы и старт в предпринимательстве",
+    long:
+      "Работаю с двумя группами. Старшеклассникам — помогаю поступить в МФТИ и другие топовые вузы через олимпиады и ЕГЭ. Студентам — помогаю найти своё направление и запустить первый проект",
+    cover: "/photos/cover-mentoring.jpg",
     hideName: true,
   },
   {
@@ -295,7 +295,7 @@ export const COMMUNITY = [
 
 export const PARTNERS_FLOATING = [
   { name: "Т-Банк", note: "Партнёр", logo: "/logos/tbank-icon.png" },
-  { name: "Онлайн-школа Сколково", note: "Партнёр", logo: "/logos/skolkovo-icon.png" },
+  { name: "Сколково через ШПА", note: "Партнёр", logo: "/logos/skolkovo-emblem.png" },
 ];
 
 export const PARTNER_HIGHLIGHT = {

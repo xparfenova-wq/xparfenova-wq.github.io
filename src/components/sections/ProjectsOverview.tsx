@@ -142,7 +142,7 @@ export function SocialProjects() {
               letterSpacing: "-0.035em",
             }}
           >
-            Проекты, где меняю траектории людей.
+            Проекты, которые делаю не ради дохода.
           </h2>
         </motion.div>
 
